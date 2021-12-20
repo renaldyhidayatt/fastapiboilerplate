@@ -2,6 +2,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.auth import authrouter
+from routes.users import usersrouter
+
 from config.database import create_table
 
 
@@ -30,6 +32,7 @@ def hello():
 
 
 app.include_router(authrouter.router)
+app.include_router(usersrouter.router)
 
 
 if __name__ == "__main__":
