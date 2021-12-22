@@ -24,6 +24,10 @@ def upgrade():
         sa.Column("name", sa.String(), nullable=False),
         sa.Column('email', sqlalchemy_utils.types.email.EmailType(length=255), nullable=True),
         sa.Column("password", sa.String(), nullable=False),
+        sa.Column("verifyCationToken", sa.String(), nullable=True),
+        sa.Column("verifyDate", sa.DateTime(), nullable=True),
+        sa.Column('passwordResetDate', sa.DateTime(), nullable=True),
+        sa.Column('resetPasswordToken', sa.String(), nullable=True),
         sa.PrimaryKeyConstraint("id"),
     )
 

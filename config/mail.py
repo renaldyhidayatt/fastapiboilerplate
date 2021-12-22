@@ -1,8 +1,9 @@
 from fastapi_mail import ConnectionConfig, MessageSchema, FastMail
 
+
 config = ConnectionConfig(
-    MAIL_USERNAME="monique.schimmel32@ethereal.email",
-    MAIL_PASSWORD="sVqwgvSTVNrJ2713wp",
+    MAIL_USERNAME="karolann.ritchie63@ethereal.email",
+    MAIL_PASSWORD="9TfhcKk9EWCRCRcJVF",
     MAIL_FROM="lane.mcglynn@ethereal.email",
     MAIL_PORT=587,
     MAIL_SERVER="smtp.ethereal.email",
@@ -11,7 +12,6 @@ config = ConnectionConfig(
     USE_CREDENTIALS=True,
     VALIDATE_CERTS=True,
 )
-
 
 html = """
     

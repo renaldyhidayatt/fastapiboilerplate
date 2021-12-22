@@ -2,6 +2,6 @@
 
 ```
 alembic upgrade head
-alembic upgrade downgrade
+alembic downgrade base
 
 ```

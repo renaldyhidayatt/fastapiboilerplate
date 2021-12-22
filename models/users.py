@@ -1,5 +1,6 @@
 from typing import Optional
-from sqlmodel import SQLModel, Field
+from sqlmodel import SQLModel, Field, DateTime
+from datetime import datetime
 
 
 class Users(SQLModel, table=True):
@@ -7,3 +8,8 @@ class Users(SQLModel, table=True):
     name: str
     email: str
     password: str
+    verifyCationToken: Optional[str] = None
+    verifyDate: datetime = Field(default_factory=datetime.now, nullable=True)
+
+    passwordResetDate: datetime = Field(default_factory=datetime.now, nullable=True)
+    resetPasswordToken: Optional[str] = None
