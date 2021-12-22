@@ -10,6 +10,8 @@ from config.database import create_table
 app = FastAPI()
 
 
+
+
 @app.on_event("startup")
 async def runtimestartup():
     create_table()

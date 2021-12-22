@@ -11,6 +11,7 @@ from .usersentity import UserEntity
 router = APIRouter(prefix="/users", tags=["Users"])
 
 
+
 @router.get("/")
 async def getAll(current_users=Depends(Token.get_currentUser)):
     db = Session(engine)
@@ -37,9 +38,9 @@ async def createUsers(request: UserEntity):
     )
 
     db.add(db_create)
-    db.commit
+    db.commit()
 
-    return Response(content="Bisa", status=status)
+    return Response(content="Bisa", status_code=status)
 
 
 @router.put("/{id}")
@@ -53,7 +54,7 @@ async def updateUsers(id: int, request: UserEntity):
 
     db.commit()
 
-    return Response(content="Update", status=status.HTTP_200_OK)
+    return Response(content="Update", status_code=status.HTTP_200_OK)
 
 
 @router.delete("/{id}")
@@ -65,4 +66,4 @@ async def deleteUsers(id: int):
     db.delete(db_delete)
     db.commit()
 
-    return Response(content="Delete Users", status=status.HTTP_200_OK)
+    return Response(content="Delete Users", status_code=status.HTTP_200_OK)
