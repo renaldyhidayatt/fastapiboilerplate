@@ -7,7 +7,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlmodel import Session
 from config.database import engine
 from config.mail import Mail
-from models.users import Users
+from database.models.users import Users
 from .authentity import RegisterUser, ForgotPassword, PasswordReset
 from datetime import datetime
 from starlette.background import BackgroundTasks

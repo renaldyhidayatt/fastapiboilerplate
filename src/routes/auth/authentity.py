@@ -11,3 +11,4 @@ class ForgotPassword(BaseModel):
 
 class PasswordReset(BaseModel):
     password: str
+

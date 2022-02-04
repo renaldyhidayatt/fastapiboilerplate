@@ -2,14 +2,13 @@ from fastapi import APIRouter, Depends, Response, status
 
 from utils.tokenjwt import Token
 from utils.hashing import Hashing
-from models.users import Users
+from database.models.users import Users
 from sqlmodel import Session
 from config.database import engine
 
 from .usersentity import UserEntity
 
 router = APIRouter(prefix="/users", tags=["Users"])
-
 
 
 @router.get("/")

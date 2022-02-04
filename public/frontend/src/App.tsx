@@ -5,6 +5,20 @@ import './App.css';
 
 
 
+
+function Nyoba(){
+    return(
+        <div>
+            <p>
+                Mencoba
+            </p>
+        </div>
+    )
+}
+
+
+
+
 function App() {
   return (
     <div className="App">
@@ -24,7 +38,6 @@ function App() {
       </header>
       <h1>
        <h2>ikan</h2>
-
       </h1>
     </div>
   );
